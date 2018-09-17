@@ -18,10 +18,9 @@ describe(('You are awesome, aren\'t you?'), () => {
   it('createEnumerableProperty', async () => {
     const propertyName = 'property';
     const propertyValue = 'value';
-
     const property = createEnumerableProperty(propertyName);
-    const object = {};
 
+    const object = {};
     object[property] = propertyValue;
 
     assert.equal(Object.keys(object).length, 1);
@@ -31,10 +30,8 @@ describe(('You are awesome, aren\'t you?'), () => {
   it('createNotEnumerableProperty', async () => {
     const propertyName = 'property';
     const propertyValue = 'value';
-
     const property = createNotEnumerableProperty(propertyName);
     const object = {};
-
     object[property] = propertyValue;
 
     assert.equal(Object.keys(object).length, 0);
